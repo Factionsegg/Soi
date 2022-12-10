@@ -1,5 +1,4 @@
 # exclude everything
-public/images/*
 # exception to the rule
 !public/uploads/.gitkeep
 
