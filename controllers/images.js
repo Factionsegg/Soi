@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const port = 5000; // 3000
-const appUrl = "http://192.168.1.184"; // http://127.0.0.1
+const appUrl = "https://www.api.xs-anime.me"; // http://127.0.0.1
 
 exports.uploadBase64Image = async (req, res, next) => {
   console.log(req.body);
@@ -24,7 +24,7 @@ exports.uploadBase64Image = async (req, res, next) => {
       return res.status(201).json({
         error: false,
         message: "Base64 Image was successfully uploaded.",
-        url: `${appUrl}:${port}/public/uploads/images/${fileName}`,
+        url: `${appUrl}/public/uploads/images/${fileName}`,
       });
     } else {
       return res.status(403).json({
